@@ -1,17 +1,7 @@
-<!-- filepath: /c:/Users/joao/Documents/projetos/my_flutter_project/web/index.html -->
-<!DOCTYPE html>
 <html>
-<head>
-  <meta charset="UTF-8">
-  <title>My Flutter Project</title>
-  <script src="main.dart.js" type="application/javascript"></script>
-</head>
-<body>
-  <script>
-    // This script prevents re-execution of main.dart.js when the browser back button is pressed.
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('flutter_service_worker.js?v=1333868578');
-    }
-  </script>
-</body>
+  <body>
+    <script>
+      {{flutter_bootstrap_js}}
+    </script>
+  </body>
 </html>
