@@ -16,36 +16,3 @@ my_flutter_project
 ├── pubspec.yaml           # Project configuration and dependencies
 └── README.md              # Project documentation
 ```
-
-## Getting Started
-
-To get started with this project, clone the repository and run the following commands:
-
-1. Navigate to the project directory:
-   ```
-   cd my_flutter_project
-   ```
-
-2. Install the dependencies:
-   ```
-   flutter pub get
-   ```
-
-3. Run the application:
-   ```
-   flutter run
-   ```
-
-## Features
-
-- A simple home screen built using Flutter.
-- A login screen for user authentication.
-- A reusable custom widget for consistent UI components.
-
-## Contributing
-
-Feel free to fork the repository and submit pull requests for any improvements or features. 
-
-## License
-
-This project is open source and available under the [MIT License](LICENSE).
