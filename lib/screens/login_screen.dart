@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'register_store_screen.dart';
 
 class LoginScreen extends StatelessWidget {
   @override
@@ -36,7 +37,10 @@ class LoginScreen extends StatelessWidget {
             SizedBox(height: 16.0),
             TextButton(
               onPressed: () {
-                // Handle sign up logic here
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => RegisterStoreScreen()),
+                );
               },
               child: Text('Cadastrar-se'),
             ),
