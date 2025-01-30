@@ -4,7 +4,7 @@ import 'package:http/http.dart' as http;
 import '../models/business.dart';
 
 class ApiService {
-  static const String apiUrl = 'http://localhost:8080/api/businesses';
+  static const String apiUrl = 'https://comercios-api-1js7.onrender.com/api/businesses';
 
   Future<void> registerBusiness(BuildContext context, Business business) async {
     try {
