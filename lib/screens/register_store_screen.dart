@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:email_validator/email_validator.dart';
 import 'package:flutter_multi_formatter/flutter_multi_formatter.dart';
+import '../models/business.dart';
+import '../services/api_service.dart';
 
 class RegisterStoreScreen extends StatefulWidget {
   @override
@@ -12,6 +14,7 @@ class _RegisterStoreScreenState extends State<RegisterStoreScreen> {
   final _razaoSocialController = TextEditingController();
   final _cnpjController = TextEditingController();
   final _emailController = TextEditingController();
+  final ApiService _apiService = ApiService();
 
   @override
   Widget build(BuildContext context) {
@@ -49,7 +52,7 @@ class _RegisterStoreScreenState extends State<RegisterStoreScreen> {
                   border: OutlineInputBorder(),
                 ),
                 keyboardType: TextInputType.number,
-                inputFormatters: [MaskedInputFormatter('##.###.###/####-##')],
+                inputFormatters: [MaskedInputFormatter('00.000.000/0000-00')],
                 validator: (value) {
                   if (value == null || value.isEmpty) {
                     return 'Por favor, insira o CNPJ';
@@ -80,7 +83,12 @@ class _RegisterStoreScreenState extends State<RegisterStoreScreen> {
               ElevatedButton(
                 onPressed: () {
                   if (_formKey.currentState!.validate()) {
-                    // Handle store registration logic here
+                    final business = Business(
+                      razaoSocial: _razaoSocialController.text,
+                      cnpj: _cnpjController.text,
+                      email: _emailController.text,
+                    );
+                    _apiService.registerBusiness(context, business);
                   }
                 },
                 child: Text('Cadastrar'),
