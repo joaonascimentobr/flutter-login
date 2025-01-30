@@ -72916,7 +72916,7 @@ xb(a,b){return this.af7(a,b)},
 af7(a,b){var s=0,r=A.S(t.H),q=1,p,o,n,m,l,k,j
 var $async$xb=A.T(function(c,d){if(c===1){p=d
 s=q}while(true)switch(s){case 0:q=3
-m=A.hO("http://localhost:8080/api/businesses")
+m=A.hO("https://comercios-api-1js7.onrender.com/api/businesses")
 l=t.N
 l=A.an(["Content-Type","application/json"],l,l)
 s=6
