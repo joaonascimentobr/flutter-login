@@ -10,6 +10,7 @@ dependencies:
   flutter:
     sdk: flutter
   email_validator: ^2.0.1
+  flutter_multi_formatter: ^2.0.0
 
 dev_dependencies:
   flutter_test:

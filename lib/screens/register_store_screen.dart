@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:email_validator/email_validator.dart';
+import 'package:flutter_multi_formatter/flutter_multi_formatter.dart';
 
 class RegisterStoreScreen extends StatefulWidget {
   @override
@@ -48,6 +49,7 @@ class _RegisterStoreScreenState extends State<RegisterStoreScreen> {
                   border: OutlineInputBorder(),
                 ),
                 keyboardType: TextInputType.number,
+                inputFormatters: [MaskedInputFormatter('##.###.###/####-##')],
                 validator: (value) {
                   if (value == null || value.isEmpty) {
                     return 'Por favor, insira o CNPJ';
